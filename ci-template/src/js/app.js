@@ -6,18 +6,10 @@ console.log('worked');
 console.log(sum([1, 2]));
 
 
-import showHealth from './health';
-
-console.log('worked');
-
-showHealth(70);
+console.log('app worked')
 
 
-import sortUnits from './sort';
+import Game, {GameSavingData, readGameSaving as loadGame, writeGameSaving as saveGame} from './game';
 
-const a = [
-  { name: 'мечник', health: 10 },
-  { name: 'маг', health: 100 },
-  { name: 'лучник', health: 80 },
-];
-sortUnits(a);
+const game = new Game();
+game.start();
